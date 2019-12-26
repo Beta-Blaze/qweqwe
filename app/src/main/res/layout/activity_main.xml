@@ -10,43 +10,49 @@
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
-            android:textStyle="normal|bold|italic"
-            android:background="#00FFFFFF"
-            android:textAlignment="gravity" android:textSize="80sp" android:textColor="@android:color/holo_red_light"
-            android:textIsSelectable="true" android:id="@+id/textView"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent"/>
+            android:text="@string/text_init"
+            android:id="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/text_style"/>
+
+    <!--
+        Не рекомендуется писать здесь в верхнем регистре
+        Подобная обработка нажатия кнопки считается "плохим тоном":
+        Это не только усложняет чтение кода, но также делает невозможным
+        его повторное использование, когда это необходимо
+        Лучше всего использовать слушатели
+    -->
+
     <Button
-            android:text="RESET"
+            android:text="@string/button_reset"
             android:onClick="resetMe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/RANDOM_button"
-            app:layout_constraintStart_toEndOf="@+id/COUNT_button3"
+            android:id="@+id/button_random"
+            app:layout_constraintStart_toEndOf="@+id/button_count"
             android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintTop_toTopOf="@+id/COUNT_button3" app:layout_constraintHorizontal_bias="0.561"
+            app:layout_constraintTop_toTopOf="@+id/button_count" app:layout_constraintHorizontal_bias="0.561"
             android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintVertical_bias="0.0"/>
     <Button
-            android:text="Hello"
+            android:text="@string/text_hello"
             android:onClick="toastMe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/TOAST_button"
-            app:layout_constraintTop_toTopOf="@+id/COUNT_button3"
-            app:layout_constraintEnd_toStartOf="@+id/COUNT_button3" android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toTopOf="@+id/button_count"
+            app:layout_constraintEnd_toStartOf="@+id/button_count" android:layout_marginEnd="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
             android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.344" app:layout_constraintVertical_bias="0.0"/>
     <Button
-            android:onClick="cauntMe"
-            android:text="COUNT"
+            android:onClick="countMe"
+            android:text="@string/button_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/COUNT_button3"
+            android:id="@+id/button_count"
             android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/textView" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"

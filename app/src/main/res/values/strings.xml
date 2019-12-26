@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Count</string>
     <string name="qwe">qwe</string>
+    <string name="text_init">0</string>
+    <string name="button_reset">RESET</string>
+    <string name="text_hello">Hello</string>
+    <string name="button_count">COUNT</string>
 </resources>
